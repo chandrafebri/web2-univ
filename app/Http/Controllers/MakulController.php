@@ -13,14 +13,6 @@ class MakulController extends Controller
         return view('makul.index', compact('makul'));
     }
 
-    public function create() {
-        return "halo saya Makul Kontroler, dari Method create";
-    }
-
-    public function halo() {
-        return "Halo Dunia";
-    }
-
     public function tambah() {
         return view('makul.tambah');
     }

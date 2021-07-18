@@ -23,7 +23,7 @@
                             <input type="number" name="sks" id="" class="form-control" placeholder="Masukkan Jumlah SKS" value="{{is_null($makul) ? '' : $makul->sks}}">
                         </div>
                         <button class="btn btn-primary" type="submit" name="simpan">SIMPAN</button>
-                        <a href="makul" class="btn btn-danger">BATAL</a>
+                        <a href="{{route('makul')}}" class="btn btn-danger">BATAL</a>
                     </form>
                 </div>
             </div>
