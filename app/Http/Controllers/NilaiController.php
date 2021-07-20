@@ -27,4 +27,25 @@ class NilaiController extends Controller
         alert()->success('Sukses','Data berhasil disimpan.');
         return redirect()->route('nilai');
     }
+
+    public function edit($id) {
+        $mahasiswa  = Mahasiswa::all();
+        $makul = Makul::all();
+        $nilai = Nilai::find($id);
+        return view('nilai.edit', compact('nilai','mahasiswa','makul'));
+    }
+
+    public function update (Request $request, $id) {
+        $nilai = Nilai::find($id);
+        $nilai->update($request->all());
+        toast('Yeay, berhasil Edit Data','success');
+        return redirect()->route('nilai');
+    }
+
+    public function hapus($id) {
+        $nilai = Nilai::find($id);
+        $nilai->delete();
+        toast('Yeay, berhasil Hapus Data','success');
+        return redirect()->route('nilai');
+    }
 }
