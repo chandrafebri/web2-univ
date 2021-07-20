@@ -19,6 +19,7 @@ Auth::routes();
 
 Route::get('/home', 'HomeController@index')->name('home');
 
+
 //routing makul
 Route::get('makul', 'MakulController@index')->name('makul');
 Route::get('tambah-makul', 'MakulController@tambah');
@@ -34,3 +35,6 @@ Route::get('edit-mahasiswa/{id}', 'MahasiswaController@edit')->name('mahasiswa.e
 Route::get('hapus-mahasiswa/{id}', 'MahasiswaController@hapus')->name('hapus.mahasiswa');
 Route::post('simpan-mahasiswa', 'MahasiswaController@store')->name('simpan.mahasiswa');
 Route::post('update-mahasiswa/{id}', 'MahasiswaController@update')->name('update.mahasiswa');
+
+//routing Nilai
+Route::get('nilai', 'NilaiController@index')->name('nilai');
