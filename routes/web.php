@@ -38,3 +38,8 @@ Route::post('update-mahasiswa/{id}', 'MahasiswaController@update')->name('update
 
 //routing Nilai
 Route::get('nilai', 'NilaiController@index')->name('nilai');
+Route::get('tambah-nilai', 'NilaiController@tambah');
+Route::get('edit-nilai/{id}', 'NilaiController@edit')->name('nilai.edit');
+Route::get('hapus-nilai/{id}', 'NilaiController@hapus')->name('hapus.nilai');
+Route::post('simpan-nilai', 'NilaiController@store')->name('simpan.nilai');
+Route::post('update-nilai/{id}', 'NilaiController@update')->name('update.nilai');

@@ -34,6 +34,8 @@
                                 <td>{{$nli->makul->sks}}</td>
                                 <td>{{$nli->nilai}}</td>
                                 <td>
+                                    <a href="{{route('nilai.edit', $nli->id)}}" class="btn btn-sm btn-warning">EDIT</a>
+                                    <a href="{{route('hapus.nilai', $nli->id)}}" class="btn btn-sm btn-danger">HAPUS</a>
                                 </td>
                             </tr>
                             @endforeach
