@@ -15,7 +15,7 @@
                         <div class="form-group">
                             <label for="">NAMA MAHASISWA</label>
                             <div class="dropdown" class="form-control">
-                                    <select name="mahasiswa_id" id="mahasiswa_id">
+                                    <select name="mahasiswa_id" id="mahasiswa_id" class="select2">
                                         <option value=""  disabled selected>--Pilih Mahasiswa--</option>
                                         @foreach ($mahasiswa as $m)
                                             <option value="{{ $m->id }}">{{ $m->user->name }}</option>
@@ -26,7 +26,7 @@
                         <div class="form-group">
                             <label for="">MATA KULIAH</label>
                             <div class="dropdown" class="form-control">
-                                    <select name="makul_id" id="makul_id">
+                                    <select name="makul_id" id="makul_id" class="select2">
                                         <option value=""  disabled selected>--Pilih Mata Kuliah--</option>
                                         @foreach ($makul as $mk)
                                             <option value="{{ $mk->id }}">{{ $mk->nama_makul }}</option>
